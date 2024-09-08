@@ -30,7 +30,7 @@ tspan=0:dt:300; % 求解时间点
 X1=k*theta.*cos(theta);
 Y1=k*theta.*sin(theta);
 for i=1:10:length(theta)
-    title({['t=',num2str(tt(i))],'龙头前把手中心的轨迹'})
+    title({['t=',num2str(tt(i))],'龙头前把手的运动轨迹'})
     plot(X1(i),Y1(i),'b.','MarkerSize',10)
     drawnow
 end

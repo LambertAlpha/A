@@ -1,4 +1,3 @@
-%% VX公众号：Matlab techniques出品，谨防假冒！
 clc;close all;clear
 warning off
 luoju_value=[50:-0.5:42]*1e-2; % 螺距取值
@@ -18,7 +17,7 @@ for k_luo=1:length(luoju_value)
     % y=r.*sin(theta);
     % figure(1)
     % set(gcf,'Position',[200 200 600 600]);
-    % plot(x,y,'-')VX公众号：Matlab techniques出品，谨防假冒！
+    % plot(x,y,'-')
     % axis equal
     % grid on
     % xlabel('x')
@@ -71,7 +70,7 @@ for k_luo=1:length(luoju_value)
         %     hp=plot(X(:,end),Y(:,end),'k-','LineWidth',1.2,'Marker','o','MarkerSize',6,'MarkerFaceColor','r'); % 更新下此时的龙
         %     title({['t=',num2str(300+step*dt)],'VX公众号Matlab techniques出品','继续盘入，轨迹'})
         %     drawnow
-        % 以上，计算完成了下一个时间点下，各个位置点 下面要判断是否接触！公众号Matlab techniques发布，其他出处皆为抄袭！
+        % 以上，计算完成了下一个时间点下，各个位置点 下面要判断是否接触！
         for i=1:round(N/2)
             x_1=X(i,2);x_2=X(i+1,2);
             y_1=Y(i,2);y_2=Y(i+1,2); % 意思是，对于第一块板，先确定此时两个孔的坐标
@@ -124,7 +123,6 @@ plot(luoju_value,theta)
 xlim([0.42,0.5])
 xlabel('螺距(m)')
 legend('任意一个螺距下头部把手能进入到的最小角度','圆周与螺线交界处角度和螺距的关系')
-%%%%%%公众号Matlab techniques出品！其他出处皆为抄袭！%%%%%%%%%%%%%%
 
 %% 定义子函数：用来求解螺线上任意一个孔所在点坐标知道的情况下，如何求下一个孔所在位置
 function theta=solve_theta(luoju,x1,y1,theta1,d) % 知道等距螺线上任意一点x1,y1,求在这同一条螺线上且与(x1,y1)这点相距为d的点的角度,要求这个角度一定要大于(x1,y1)这点的角度theta1

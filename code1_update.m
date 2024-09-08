@@ -23,7 +23,7 @@ hold on
 % 第一步，先确定300s内，龙头第一个把手的位置演化
 mydtheta=@(t,theta)-1./(k*sqrt(1+theta.^2));
 theta0=2*pi*16; % 初始位置时候的角度
-dt=0.1; % 时间步长
+dt=0.5; % 时间步长
 tspan=0:dt:300; % 求解时间点
 [tt,theta]=ode45(mydtheta,tspan,theta0); % 龙格库塔法求解
 X1=k*theta.*cos(theta);
